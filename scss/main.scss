@@ -1,0 +1,12 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: $fuente-principal; background: $color-fondo; color: $color-texto; }
+.header { background: $color-primario; color: white; padding: 1rem; }
+.header__menu { list-style: none; @include flex-center; gap: 1rem; }
+.header__menu a { color: white; text-decoration: none; &:hover { color: $color-secundario; } }
+.footer { background: $color-primario; color: white; text-align: center; padding: 1rem; }
+.productos__grid { @include grid-template(4, 1rem); padding: 1rem; }
+.producto-card { background: white; padding: 1rem; border: 1px solid #ddd; text-align: center; }
+.producto-card img { max-width: 100%; }
